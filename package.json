@@ -1,0 +1,35 @@
+{
+  "name": "office-smart-order",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cp ./envs/.env.development ./.env.local && bunx --bun vite",
+    "build": "cp ./envs/.env.production ./.env.local && bunx --bun vite build --mode production",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@quasar/extras": "^2.1.0",
+    "@wps/common-lib": "github:wps-develop/common-lib#main",
+    "@wps/common-ui": "github:wps-develop/common-ui#main",
+    "axios": "^1.20.0",
+    "pinia": "^4.1.0",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "quasar": "^2.35.2",
+    "sweetalert2": "^11.26.25",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@quasar/vite-plugin": "^2.0.2",
+    "@types/node": "^24.19.2",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/tsconfig": "^0.9.1",
+    "sass-embedded": "^1.106.1",
+    "typescript": "6.0.3",
+    "vite": "^8.3.4",
+    "vite-plugin-vue-devtools": "^8.2.1",
+    "vue-ray": "^2.0.3",
+    "vue-tsc": "^3.3.13"
+  }
+}

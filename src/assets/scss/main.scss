@@ -1,0 +1,219 @@
+/* ──────────────────────────────────────────────────
+    #region 1. 変数・基本設定
+ ────────────────────────────────────────────────── */
+:root {
+  --app-bg-color: #f5f7fa;
+  /* Quasarの --q-primary 等は自動展開されるため定義不要 */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--app-bg-color);
+  font-family: constants.$font-family-en;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ──────────────────────────────────────────────────
+    #region 2. 汎用クラス (Utilities)
+ ────────────────────────────────────────────────── */
+.text-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-left: 4px solid var(--q-primary);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+.decoration-none {
+  text-decoration: none;
+}
+.text-white {
+  color: #fff !important;
+}
+.bg-white {
+  background: #fff !important;
+}
+.pre-wrap {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.icon-fill {
+  font-variation-settings: "FILL" 1;
+}
+
+// IME制御（レガシー環境用だがクラスとして集約）
+.ime-off {
+  ime-mode: disabled;
+}
+.ime-on {
+  ime-mode: active;
+}
+
+// リスト装飾解除
+.list-no-mark {
+  list-style: none;
+  padding-left: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.fs-25 {
+  font-size: constants.$fs25;
+}
+.fs-50 {
+  font-size: constants.$fs50;
+}
+.fs-60 {
+  font-size: constants.$fs60;
+}
+.fs-70 {
+  font-size: constants.$fs70;
+}
+.fs-75 {
+  font-size: constants.$fs75;
+}
+.fs-80 {
+  font-size: constants.$fs80;
+}
+.fs-85 {
+  font-size: constants.$fs85;
+}
+.fs-90 {
+  font-size: constants.$fs90;
+}
+.fs-100 {
+  font-size: constants.$fs100;
+}
+.fs-110 {
+  font-size: constants.$fs110;
+}
+.fs-120 {
+  font-size: constants.$fs120;
+}
+.fs-125 {
+  font-size: constants.$fs125;
+}
+.fs-150 {
+  font-size: constants.$fs150;
+}
+.fs-175 {
+  font-size: constants.$fs175;
+}
+.fs-200 {
+  font-size: constants.$fs200;
+}
+.fs-250 {
+  font-size: constants.$fs250;
+}
+
+/* ──────────────────────────────────────────────────
+    #region 3. フォーム要素・入力制御
+ ────────────────────────────────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+textarea {
+  ime-mode: disabled; // 基本はOFF
+  &.ime-on {
+    ime-mode: active;
+  }
+}
+
+input[type="number"] {
+  text-align: right;
+  ime-mode: disabled;
+}
+
+/* ──────────────────────────────────────────────────
+    #region 4. Quasarコンポーネントの調整 (Override)
+ ────────────────────────────────────────────────── */
+
+// エラー時のフィールド装飾
+.q-field--error {
+  background-color: $red-1;
+
+  .q-field__label,
+  h5 {
+    color: $red;
+    font-weight: bold;
+  }
+}
+
+// Readonly時のボーダー強制表示（readonly-overrideクラス付与時）
+.readonly-override {
+  &.q-field--outlined.q-field--readonly .q-field__control::before {
+    border-style: solid !important;
+  }
+  &.q-field--filled.q-field--readonly .q-field__control {
+    border-radius: 0.25rem !important;
+    &::before {
+      border-bottom: none;
+      border-radius: 0.25rem !important;
+    }
+  }
+}
+
+// ダークモード時のFilled背景調整
+.q-field--filled.q-field--dark {
+  .q-field__control,
+  .q-field__control::before {
+    background-color: rgba(#fff, 0.15);
+  }
+}
+/* app.scss 等の共通スタイルにて */
+
+/* 基本（モバイル・iPhone対策） */
+.q-field__native,
+.q-field__input {
+  font-size: 16px;
+}
+
+/* デスクトップ時のみ、本来の緻密なサイズに戻す */
+.is-desktop {
+  .q-field__native,
+  .q-field__input {
+    font-size: 14px; /* あるいは卿が好むサイズ */
+  }
+}
+
+/* ──────────────────────────────────────────────────
+    #region 5. 外部ライブラリ (SweetAlert2等)
+ ────────────────────────────────────────────────── */
+#swal2-html-container {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  max-width: calc(100% - 2rem);
+  white-space: pre-wrap;
+  text-align: left;
+  word-break: break-all;
+}

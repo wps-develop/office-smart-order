@@ -1,0 +1,42 @@
+$sizeXS: 0.25rem;
+$sizeSM: 0.5rem;
+$sizeMD: 1rem;
+$sizeLG: 1.5rem;
+$sizeXL: 3rem;
+
+$fs25: 0.25rem;
+$fs50: 0.5rem;
+$fs60: 0.6rem;
+$fs70: 0.7rem;
+$fs75: 0.75rem;
+$fs80: 0.8rem;
+$fs85: 0.85rem;
+$fs90: 0.9rem;
+$fs100: 1rem;
+$fs110: 1.1rem;
+$fs120: 1.2rem;
+$fs125: 1.25rem;
+$fs150: 1.5rem;
+$fs175: 1.75rem;
+$fs200: 2rem;
+$fs250: 2.5rem;
+
+$header-height: 3rem;
+$admin-header-height: 1.9rem;
+
+@font-face {
+  font-family: 'yen';
+  font-weight: 400;
+  src: url('/fonts/yen.woff2') format('woff2'), url('/fonts/yen.woff') format('woff');
+}
+$font-family-main: 'yen', 'OnlyYen', 'Consolas', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial',
+  'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'BIZ UDPGothic',
+  'Noto Sans CJK JP', 'Noto Sans JP', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol', 'Noto Color Emoji';
+
+$font-family-en: 'yen', 'OnlyYen', 'AR One Sans', 'Consolas', 'Avenir', 'Helvetica Neue',
+  'Helvetica', 'Arial', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'BIZ UDPGothic', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+$font-family-space: 'yen', 'UDEV Gothic LG', #{$font-family-main};
