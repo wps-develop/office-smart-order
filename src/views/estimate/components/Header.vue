@@ -95,7 +95,7 @@ const onClickShowMemo = async () => {};
     <div>
       <q-btn color="primary" label="共有メモ" @click="onClickShowMemo" />
     </div>
-    <div class="q-ml-auto" v-if="staff !== null">
+    <div class="q-ml-auto1" v-if="staff !== null">
       担当：{{ staff.staff_name }}
     </div>
   </header>

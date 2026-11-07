@@ -76,6 +76,7 @@ onMounted(() => {
 <!-- ────────────────────────────────────────────────── -->
 <template>
   <Header ref="header" />
+  <q-separator spaced="1rem" color="dark" />
   <List ref="list" />
 </template>
 
